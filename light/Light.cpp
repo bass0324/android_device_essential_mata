@@ -82,11 +82,6 @@ static void handleBacklight(const LightState& state) {
     set(LCD_LED BRIGHTNESS, brightness);
 }
 
-static void handleButtons(const LightState& state) {
-    uint32_t brightness = state.color & 0xFF;
-    set(BUTTON_LED BRIGHTNESS, brightness);
-    set(BUTTON1_LED BRIGHTNESS, brightness);
-}
 
 /*
  * Scale each value of the brightness ramp according to the
@@ -175,7 +170,6 @@ static void handleNotification(const LightState& state) {
 
 static std::map<Type, std::function<void(const LightState&)>> lights = {
     {Type::BACKLIGHT, handleBacklight},
-    {Type::BUTTONS, handleButtons},
     {Type::BATTERY, handleNotification},
     {Type::NOTIFICATIONS, handleNotification},
     {Type::ATTENTION, handleNotification},
