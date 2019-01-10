@@ -102,7 +102,6 @@ QCOM_BT_USE_BTNV := true
 TARGET_USES_QTI_CAMERA_DEVICE := true
 USE_CAMERA_STUB := true
 
-
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
@@ -177,7 +176,7 @@ TARGET_RECOVERY_UI_MARGIN_WIDTH := 64
 BOARD_ROOT_EXTRA_FOLDERS := bt_firmware dsp firmware persist
 
 # Security Patch Level
-VENDOR_SECURITY_PATCH := 2018-12-05
+VENDOR_SECURITY_PATCH := 2018-1-05
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
